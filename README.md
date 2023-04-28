@@ -1,4 +1,4 @@
-<h2 align="left">Hi 👋! My name is Agneya and I'm a Software Developer</h2>
+<h2 align="left">Hi 👋! My name is Agneya, a Software Developer</h2>
 
 ###
 
@@ -11,7 +11,7 @@
 
 <img align="right" height="150" src="https://media.tenor.com/pPKOYQpTO8AAAAAS/monkey-developer.gif"  />
 
-###
+### 
 
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" width="42" alt="javascript logo"  />
@@ -35,7 +35,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="30" width="42" alt="vscode logo"  />
 </div>
 
-###
+### 
 
 <div align="left">
   <a href="https://www.instagram.com/agni__27/" target="_blank">
@@ -47,10 +47,10 @@
 </div>
 
 
-###
+### Visitors
 
 <div align="center">
   <img src="https://profile-counter.glitch.me/agni27/count.svg?"  />
 </div>
 
-###
+###  Bye!
