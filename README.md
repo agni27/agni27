@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, I'm Agneya</h1>
 <h3 align="center">A passionate web developer</h3>
-<img align="right" width='500' src="https://media.tenor.com/pPKOYQpTO8AAAAAS/monkey-developer.gif">
+<img align="right" width='400' src="https://media.tenor.com/pPKOYQpTO8AAAAAS/monkey-developer.gif">
 
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=agni27&label=Profile%20views&color=0e75b6&style=flat" alt="agni27" /> </p>
 
