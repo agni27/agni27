@@ -46,9 +46,9 @@
   </a>
 </div>
 
-###
+### Snake Eating My Contributions
+![snake gif](https://github.com/agni27/agni27/blob/output/github-contribution-grid-snake.gif)
 
-<img src="https://raw.githubusercontent.com/agni27/agni27/output/snake.svg" alt="Snake animation" />
 
 ###
 
