@@ -1,0 +1,103 @@
+import pymongo
+from pymongo import MongoClient
+
+def get_database():
+    connectionString = "mongodb://127.0.0.1:27017/?directConnection=true"
+    client = MongoClient(connectionString)
+    return client['employee']
+
+employees_collection = get_database().employee
+
+employees_collection.insert_many([
+    {
+        "employee_id": 1,
+        "first_name": "John",
+        "last_name": "Doe",
+        "department": "HR",
+        "salary": 60000
+    },
+    {
+        "employee_id": 2,
+        "first_name": "Jane",
+        "last_name": "Smith",
+        "department": "Engineering",
+        "salary": 80000
+    },
+])
+
+def insert_employee():
+    employee = {
+        "employee_id": int(input("Enter Employee ID: ")),
+        "first_name": input("Enter Employee First Name: "),
+        "last_name": input("Enter Employee Last name: "),
+        "department": input("Enter Department: "),
+        "salary": float(input("Enter Salary: "))
+    }
+    employees_collection.insert_one(employee)
+    print("Employee inserted successfully.")
+
+def find_employee():
+    employee_id = int(input("Enter Employee ID to find: "))
+    employee = employees_collection.find_one({"employee_id": employee_id})
+    if employee:
+        print("Employee found:")
+        print(employee)
+    else:
+        print("Employee not found.")
+
+def update_employee():
+    employee_id = int(input("Enter Employee ID to update: "))
+    update_values = {
+        "department": input("Enter new Department: "),
+        "salary": float(input("Enter new Salary: "))
+    }
+
+    result = employees_collection.update_one({"employee_id": employee_id}, {"$set": update_values})
+    if result.modified_count > 0:
+        print("Employee updated successfully.")
+    else:
+        print("Employee not found.")
+
+def delete_employee():
+    employee_id = int(input("Enter Employee ID to delete: "))
+    result = employees_collection.delete_one({"employee_id": employee_id})
+    if result.deleted_count > 0:
+        print("Employee deleted successfully.")
+    else:
+        print("Employee not found.")
+
+def main():
+    while True:
+        print("\nMenu:")
+        print("1. Insert employee")
+        print("2. Find employee")
+        print("3. Update employee")
+        print("4. Delete employee")
+        print("5. Exit")
+        choice = int(input("Enter your choice: "))
+
+        if choice == 1:
+            insert_employee()
+        elif choice == 2:
+            find_employee()
+        elif choice == 3:
+            update_employee()
+        elif choice == 4:
+            delete_employee()
+        elif choice == 5:
+            print("Exiting the program.")
+            break
+        else:
+            print("Invalid Choice. Enter again carefully.")
+
+if __name__ == "__main__":
+    main()
+Commands for mongo
+
+Mongosh 
+Use db
+Quit
+Sudo apt install python 3.8 -venv
+python3 -m venv env
+Source env/bin/activate
+Python3 -m pip install "pymongo[srv]"
